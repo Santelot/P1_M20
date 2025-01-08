@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-P1-M21</title>
+    <title>Playbook-P1-M20</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6;}
         .container { max-width: 1000px; margin: auto; padding: 20px; }
@@ -35,30 +35,22 @@
     </style>
     <script>
         function updateActivities() {
-            const selectedTime = document.getElementById('class-time').value;
+             const selectedTime = document.getElementById('class-time').value;
             const activity2 = document.getElementById('activity-2');
-             const activity4Step6 = document.getElementById('activity-4-step-6');
-             const activity4Step7 = document.getElementById('activity-4-step-7');
-
+             const activity4 = document.getElementById('activity-4');
 
             if (selectedTime === '45') {
                 activity2.style.display = 'none';
-                 if (activity4Step6) activity4Step6.style.display = 'block';
-                 if (activity4Step7) activity4Step7.style.display = 'block';
-
-
+                if (activity4) activity4.style.display = 'block';
             } else if (selectedTime === '40') {
                 activity2.style.display = 'none';
-                if (activity4Step6) activity4Step6.style.display = 'none';
-                if (activity4Step7) activity4Step7.style.display = 'none';
-
-
+                if (activity4) activity4.style.display = 'none';
             } else {
                 activity2.style.display = 'block';
-                 if (activity4Step6) activity4Step6.style.display = 'block';
-                 if (activity4Step7) activity4Step7.style.display = 'block';
+                if (activity4) activity4.style.display = 'block';
             }
-             document.getElementById('selected-time').innerText = `Tiempo efectivo de clase: ${selectedTime} minutos`;
+
+            document.getElementById('selected-time').innerText = `Tiempo efectivo de clase: ${selectedTime} minutos`;
         }
         function toggleContent(id) {
             const content = document.getElementById(id);
@@ -68,7 +60,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Playbook-P1-M21</h1>
+        <h1>Playbook-P1-M20</h1>
     </div>
     <div class="container">
         <div class="dropdown">
@@ -79,14 +71,14 @@
                 <option value="40">40 minutos</option>
             </select>
         </div>
-         <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
-          <!-- Actividad 0 -->
-        <div id="activity-0" class="activity" data-time="N/A">
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <!-- Actividad 0 -->
+         <div id="activity-0" class="activity" data-time="N/A">
             <div class="banner" onclick="toggleContent('activity_0_content')">
                 <div class="title">🔍 Actividad 0: Revisión de Misión</div>
                   <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                    <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                   Preparación de materiales para la misión y dispositivos listos para usar Scratch Jr.
+                    Verificación inicial del equipo y materiales necesarios para completar la misión.
                 </div>
             </div>
             <div id="activity_0_content" class="content">
@@ -96,7 +88,14 @@
                         <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;">Preparar los materiales necesarios para impartir la misión y garantizar que los dispositivos estén listos para usar Scratch Jr. - Dispositivos con Scratch Jr. (app o web). - Magic Boards. - 6 ladrillos LEGO por estudiante.</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;">
+                           <strong>Paso 1:</strong> Proyectar la diapositiva 1: "Materiales y preparación de la misión". Verificar que todos los materiales estén disponibles:
+                            <ul>
+                                <li>Dispositivos con Scratch Jr. (app o web).</li>
+                                <li>Magic Boards.</li>
+                                <li>6 ladrillos LEGO por estudiante.</li>
+                            </ul>
+                        </td>
                         <td style="padding: 10px; vertical-align: top;">N/A</td>
                     </tr>
                 </table>
@@ -108,7 +107,7 @@
                 <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club ⏰ Tiempo: 3 minutos</div>
                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                 <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                    Dar la bienvenida a los estudiantes para iniciar un ambiente positivo.
+                    Bienvenida al grupo, agradecimiento y presentación de los objetivos del día.
                 </div>
             </div>
             <div id="activity_1_content" class="content">
@@ -118,31 +117,31 @@
                          <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                      </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Dar la bienvenida a los estudiantes para iniciar un ambiente positivo.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Hola, Genios! 🌳 ¡Bienvenidos a un nuevo día de aventuras creativas en el parque! Hoy vamos a convertirnos en verdaderos animadores y dar vida a nuestros propios personajes en Scratch Jr. ¿Están listos para explorar, crear y divertirnos juntos en este día en el parque? ¡Vamos a empezar esta aventura con toda la energía!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (1 minuto):</strong> Proyectar Diapositiva 2 “Gnius Club”</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Hola, Genios! 🌟 ¡Bienvenidos a una nueva misión en el parque! Hoy vamos a explorar el mundo de los bloques de movimiento y sonido en Scratch Jr., imaginando cómo nuestros personajes viven emocionantes historias en este lugar tan divertido. ¿Listos para crear un día inolvidable en el parque? ¡Vamos a empezar con toda la energía!”</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                       <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Evaluar cómo se sienten los estudiantes para conectarse emocionalmente.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Creadores de Animaciones! 🤸 Muéstrenme cómo se sienten hoy: - Si están emocionados y listos para saltar en los charcos de alegría, hagan la Pose de Saltando en el Charco (simulen un pequeño salto con las manos hacia arriba y los pies levantados 💦). - Si están curiosos y observando la naturaleza, como un explorador buscando maravillas, hagan la Pose de Observando la Naturaleza (pongan una mano en la frente, como si estuvieran observando algo interesante 🧐). ¡Muéstrenme esas poses!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Proyectar Diapositiva 3 “¿Cómo están?”; utilizar gestos para evaluar el estado de ánimo de los estudiantes.</td>
+                         <td style="padding: 10px; vertical-align: top;">“Antes de empezar, quiero saber cómo están, Genios. Si se sienten súper emocionados y listos para programar, levanten las manos como si estuvieran aplaudiendo por un proyecto genial 👏. Si prefieren observar un poco antes de entrar en acción, crucen los brazos como si estuvieran pensando en un nuevo plan 🧐. ¡Vamos a ver esas poses!”</td>
                     </tr>
                      <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0,5 minutos):</strong> Realizar el ritual de agradecimiento para crear camaradería y unión.</td>
-                         <td style="padding: 10px; vertical-align: top;">“Ahora todos juntos, juntemos nuestras manos y digamos: '¡Gracias por estar aquí, Genios! Hoy vamos a crear animaciones increíbles en el parque, programar aventuras y divertirnos mucho. ¡A dar rienda suelta a nuestra creatividad!'"</td>
-                     </tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0,5 minutos):</strong> Proyectar Diapositiva 4 y guiar a los estudiantes en el ritual de agradecimiento.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Ahora, juntemos las manos y agradezcamos por esta oportunidad de aprendizaje. Todos juntos decimos: ‘¡Gracias por estar aquí, Genios! Hoy vamos a explorar los bloques lógicos para crear historias increíbles en el parque.’”</td>
+                    </tr>
                     <tr>
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0,5 minutos):</strong> Presentar los objetivos de la misión para que los estudiantes sepan qué se logrará hoy.</td>
-                        <td style="padding: 10px; vertical-align: top;">“Hoy tenemos una misión en el parque, Genios: 1. Vamos a crear animaciones donde los personajes exploren el parque. 2. Programaremos interacciones divertidas entre los personajes. 3. ¡Vamos a compartir nuestras animaciones y celebrar nuestro día creativo en el parque! Será un día inolvidable lleno de creatividad y aprendizaje.”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0,5 minutos):</strong> Proyectar Diapositiva 5 “Objetivos de la Misión” y explicar los objetivos de la clase.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Hoy, tenemos tres objetivos principales para nuestro día en el parque: 1) Aprender a usar los bloques de movimiento y sonido como bloques lógicos para dar vida a nuestros personajes, 2) Entender cómo se aplican estos bloques con ejemplos prácticos en el contexto del parque, y 3) Usar el paper programming en equipo para planificar nuestras animaciones. ¡Vamos a explorar el poder de la lógica en nuestras creaciones!”</td>
                     </tr>
                 </table>
             </div>
         </div>
-         <!-- Actividad 2 -->
-        <div id="activity-2" class="activity" data-time="4">
-           <div class="banner" onclick="toggleContent('activity_2_content')">
-                <div class="title">🧠 Actividad 2: Brain Gym ⏰ Tiempo: 4 minutos</div>
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity" data-time="3">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">💡 Actividad 2: Innovación del Día ⏰ Tiempo: 3 minutos</div>
                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                 <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                   Activar la concentración y preparar a los estudiantes para la misión.
+                    Exploración de cómo los asistentes de voz utilizan la lógica para entender y responder a preguntas.
                 </div>
             </div>
             <div id="activity_2_content" class="content">
@@ -152,27 +151,23 @@
                         <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Introducir la actividad de gimnasia cerebral para activar la concentración y preparar a los estudiantes.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Creadores de Animaciones! 🌳 Vamos a activar nuestros cerebros con una gimnasia mental especial, inspirada en nuestro parque. Preparen sus cuerpos para moverse de forma divertida y despierta, mientras nos preparamos para animar nuestras propias historias.”</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (2 minutos):</strong> Realizar movimientos de gimnasia cerebral enfocados en la coordinación y el enfoque, relacionados con el parque.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Ahora, Genios, vamos a movernos como si estuviéramos en el parque! ✨ - El Árbol: Levanten sus brazos como ramas y balancéense suavemente como si fueran un árbol meciéndose con la brisa. - El Camino: Trazar un camino imaginario en el aire con su dedo, como si fueran explorando una nueva ruta en el parque. - El Salto: Ahora vamos a saltar suavemente como si estuviéramos brincando sobre las rocas del parque. ¡Sientan cómo su cerebro se activa con cada movimiento!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Proyectar Diapositiva 6 “Innovación del Día”</td>
+                        <td style="padding: 10px; vertical-align: top;">“Hoy vamos a conocer a un asistente de voz muy útil, como Alexa o Google Home. Aunque no lo programaremos directamente en esta clase, estos asistentes nos muestran cómo la inteligencia artificial (IA) puede entender nuestras preguntas y darnos respuestas en segundos. Para que entiendan mejor cómo funcionan, piensen en cómo un asistente de voz usa una secuencia lógica: primero escucha, luego procesa lo que dijimos y finalmente da una respuesta. ¡Escuchen cómo funcionan y cómo podemos aplicar la lógica a nuestros proyectos!”</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1,5 minutos):</strong> Integrar la gimnasia cerebral con una breve reflexión sobre cómo la actividad los prepara para el desafío.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Excelente trabajo, Creadores! 🌟 Ahora, cuéntennos, ¿cómo se sienten después de esta gimnasia mental en el parque? ¿Sienten su cerebro más despierto y listo para la aventura? Recuerden, esta energía y concentración nos ayudará a crear animaciones increíbles en Scratch Jr. ¡Prepárense para hacer magia en la pantalla!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (2,5 minutos):</strong> Proyectar Diapositiva 7 y reproducir un video corto de un asistente de voz en acción, mostrando cómo responde a preguntas básicas sobre programación y conceptos iniciales de tecnología. Luego guiar la reflexión con preguntas.</td>
+                         <td style="padding: 10px; vertical-align: top;">“¿Qué tal, Genios? ¿No es asombroso cómo estos asistentes responden a lo que les pedimos siguiendo una lógica? Ahora, imaginen que vamos a usar esta misma lógica en Scratch Jr. ¿Qué tipos de instrucciones lógicas le darían a sus personajes para que se muevan y hagan sonidos? ¿Qué historias temáticas podrían crear, pensando en cómo cada paso sigue una secuencia lógica para que la historia avance en el parque?"</td>
                     </tr>
                 </table>
             </div>
         </div>
-        <!-- Actividad 3 -->
-        <div id="activity-3" class="activity" data-time="23">
-             <div class="banner" onclick="toggleContent('activity_3_content')">
-                <div class="title">🚀 Actividad 3: Challenge ⏰ Tiempo: 23 minutos</div>
+         <!-- Actividad 3 -->
+        <div id="activity-3" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">🧠 Actividad 3: Brain Gym ⏰ Tiempo: 5 minutos</div>
                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                 <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                   Creación de animaciones en Scratch Jr con diferentes niveles de desafío.
+                    Exploración de los bloques de movimiento y sonido como piezas de un rompecabezas lógico para animaciones.
                 </div>
             </div>
             <div id="activity_3_content" class="content">
@@ -182,31 +177,51 @@
                         <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Introducir el desafío y generar entusiasmo por la actividad de creación de animaciones en Scratch Jr.</td>
-                       <td style="padding: 10px; vertical-align: top;">“¡Creadores de Animaciones, llegó el momento más emocionante del día en el parque! 🚀 Hoy vamos a poner a prueba todas nuestras habilidades en Scratch Jr con tres desafíos increíbles: 'Exploración en el Parque', 'Amigos en el Parque', y 'La Fiesta en el Parque'. Cada desafío está diseñado para que exploren diferentes aspectos de la animación. ¡Elijan su nivel y prepárense para la diversión!”</td>
+                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Proyectar Diapositiva 8 “Brain Gym” y explicar la dinámica de atención para la actividad.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Genios de la lógica! 🧠 Vamos a activar nuestras mentes como si fuéramos diseñadores de juegos. Hoy vamos a descubrir cómo los bloques de movimiento y sonido son en realidad piezas de un rompecabezas lógico para crear animaciones increíbles. ¡Prepárense para pensar como programadores y estar muy atentos, porque hay algo escondido en la explicación, como en un juego de mesa!”</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (2 minutos):</strong> Explicar en detalle los niveles de la misión y sus <span style="color: red; font-weight: bold;">condiciones</span>, adaptadas al tema del parque y sus diferentes desafíos.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Atención, Genios! Aquí están los desafíos que les esperan hoy en el parque: <br><br> <strong>Nivel Rookie (Básico): 'Exploración en el Parque'</strong>  <br><br> <strong>Objetivo:</strong> Crear una animación donde un personaje recorra el parque y descubra tres elementos interesantes (como árboles, un banco o un estanque). <br><br> <strong>Instrucciones:</strong> Diseña un fondo que represente un parque (puede incluir árboles, flores, y un camino). Elige un personaje que se moverá por el parque. Programa al personaje para que realice movimientos simples y se detenga frente a tres elementos del parque, como si los estuviera observando. Al detenerse, el personaje debe realizar una acción simple (como emitir un sonido o girar). <br><br>  <span style="color: red; font-weight: bold;">Condiciones:</span> Los movimientos deben ser claros y llevar al personaje a tres puntos distintos del fondo. Cada punto debe tener un elemento diferente. <br><br> <strong>Consejo:</strong> Ajusta los pasos para que el personaje se detenga en los lugares deseados antes de realizar su acción. <br><br> <strong>Nivel Master (Intermedio): 'Amigos en el Parque'</strong> <br><br>  <strong>Objetivo:</strong> Crear una animación donde el personaje principal interactúe con dos nuevos amigos y realicen actividades juntos. <br><br> <strong>Instrucciones:</strong> Añade dos personajes adicionales que representen los amigos. Diseña una escena en el parque donde los amigos se encuentren en diferentes áreas. Programa al personaje principal para que se mueva hacia cada amigo, inicie una interacción (como un saludo o una breve conversación) y luego realicen una actividad juntos (por ejemplo, saltar, girar o avanzar juntos). <br><br> <span style="color: red; font-weight: bold;">Condiciones:</span> Cada interacción debe ser única para cada amigo (diferentes movimientos o sonidos). Los personajes deben moverse juntos durante la actividad compartida. <br><br> <strong>Consejo:</strong> Usa bloques de ""esperar"" para coordinar las acciones entre el personaje principal y los amigos. <br><br> <strong>Nivel Hacker (Avanzado): 'La Fiesta en el Parque'</strong> <br><br> <strong>Objetivo:</strong> Crear una animación donde todos los personajes se reúnan y organicen una fiesta en el parque. <br><br> <strong>Instrucciones:</strong> Diseña una escena donde haya un área especial en el parque para la fiesta (puedes agregar una mesa, globos o música). Programa a los tres personajes para que se muevan hacia el área de la fiesta, uno tras otro, y realicen una secuencia coordinada (como un baile o una celebración). Añade elementos decorativos (personajes o dibujos) que interactúen durante la fiesta, como globos que se muevan o sonidos que se activen. <br><br> <span style="color: red; font-weight: bold;">Condiciones:</span> Cada personaje debe realizar al menos dos movimientos únicos durante la fiesta. Los movimientos y sonidos de los personajes deben estar sincronizados para simular un evento organizado.   <br><br> <strong>Consejo:</strong> Planifica primero los movimientos individuales y luego coordínalos utilizando bloques de ""esperar"" para sincronizar las acciones."</td>
+                       <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (0,5 minutos):</strong> Proyectar Diapositiva 9 “Bloques de Movimiento: Instrucciones en el Tablero” y explicar que estos bloques son instrucciones claras para que los personajes se muevan.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Empecemos a explorar los bloques de movimiento. ¡Piénsenlos como instrucciones en un tablero de juego! Con ellos, decimos a los personajes cómo y dónde moverse. El bloque ‘Avanzar’ es como dar un paso, el bloque ‘Retroceder’ como volver atrás, y el bloque ‘Girar’ como cambiar de dirección. ¡Cada bloque tiene una función clara y lógica!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0,5 minutos):</strong> Proyectar Diapositiva 10 “La Combinación Lógica de las Trayectorias”. Explicar cada bloque como una acción en el juego, usando los paneles para ver los valores numéricos.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Vean cómo la lógica de los bloques se combina para crear diferentes trayectorias. - Con ‘Avanzar’ damos pasos hacia adelante por el tablero, ¡podemos movernos 1 o 2 o 5 casillas! - Con ‘Retroceder’ volvemos atrás por nuestro camino. - Y con ‘Girar’ ¡cambiamos de camino! Podemos cambiar de dirección 90° o 180°. ¿Ven cómo podemos controlar todo en este juego de programación?”</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (20 minutos):</strong> Permitir que los estudiantes trabajen en el nivel elegido y desarrollen su animación, simulando un día divertido en el parque.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Es hora de animar, Creadores! 🎨 Elijan su desafío: - Rookie: ¡Exploren el parque! - Master: ¡Hagan amigos en el parque! - Hacker: ¡Organicen una fiesta en el parque! ¡Muestren toda su creatividad y habilidades en este día mágico en el parque!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0,5 minutos):</strong> Proyectar Diapositiva 11 “Bloques de Sonido: Señales en el Tablero” y explicar que estos bloques son como señales en el tablero que avisan qué está pasando.</td>
+                         <td style="padding: 10px; vertical-align: top;">“Ahora, exploremos los bloques de sonido, ¡que son como efectos especiales en nuestro juego! Con ellos, cada personaje tiene su propia voz. Podemos usar un sonido ‘Pop’ para que aparezca una sorpresa o un sonido grabado cuando el personaje hable. ¡Cada sonido es una señal para el jugador!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 5 (1 minuto):</strong> Proyectar Diapositiva 12 “Bloque Pop: ¡Sorpresa en el Juego!”. Explicar el bloque ‘Pop’ como si fuera el sonido de una ficha que cae en una casilla o un efecto especial en un juego de mesa.</td>
+                        <td style="padding: 10px; vertical-align: top;">“El bloque ‘Pop’ es como una sorpresa en nuestro juego. - Cuando suena ‘¡Pop!’, sabemos que algo especial está pasando, como si un personaje cayera en una casilla sorpresa o saltara. ¡Usen este bloque como un efecto para hacer que la historia sea más emocionante!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 6 (1 minuto):</strong> Proyectar Diapositiva 13 “Bloque Reproducir Sonido Grabado: Voz en el Tablero”. Explicar cómo se puede personalizar la experiencia de juego con los sonidos, usando voz o instrumentos.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Con el bloque ‘Reproducir sonido grabado’ ¡ustedes ponen la voz a sus juegos! - Pueden grabar sus propias voces, sonidos de dados, o canciones. - ¡Usen esos sonidos para que los personajes tengan su propia voz en el juego! Pueden hacer que digan ‘¡Avanzo!’ al moverse, o que griten ‘¡Cuidado!’ si caen en una casilla peligrosa. ¡Dejen volar su imaginación!”</td>
                     </tr>
                     <tr>
-                       <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (2 minutos):</strong> Reflexionar sobre los resultados y compartir el aprendizaje en equipo, como si fueran directores de animaciones mostrando sus creaciones.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Impresionantes animaciones, Genios! 🌟 Ahora, compartan sus creaciones: - Rookie: ¿Qué elementos encontraron en su exploración y cómo los animaron? - Master: ¿Cómo lograron que sus personajes interactuaran como amigos? - Hacker: ¿Cómo organizaron esa fiesta tan divertida en el parque? ¡Inspírense unos a otros con sus increíbles creaciones!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 7 (1 minuto):</strong> Proyectar Diapositiva 14 “Ejemplos de Secuencias en el Tablero”. Mostrar cómo la combinación de bloques crea patrones con lógica que cuenten una historia.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Vean cómo al combinar estos bloques de movimiento y sonido creamos secuencias lógicas, como en un tablero de juego: - Un personaje avanza en el tablero, se detiene y dice ‘¡Hola!’. - Una ficha se mueve en un tablero y suena ‘Pop’ al caer en una casilla especial. - Un personaje gira en el tablero, y suena una melodía al llegar a una zona diferente. Como si fuera un juego de la oca, en donde se siguen patrones y reglas para que la historia avance. ¡Todo tiene sentido en nuestros juegos de programación!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 8 (0,5 minutos):</strong> Sin diapositiva. Guiar a los estudiantes a pensar en historias con sentido lógico, y cómo los bloques de movimiento y sonido son la clave para crear esa lógica.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Ahora que conocen el poder de los bloques, ¿cómo crearían sus propias historias como si fueran juegos de mesa? Piensen cómo harían que los personajes se muevan y suenen de manera lógica en sus historias y en sus propios juegos de Scratch Jr. Recuerden que todo se trata de crear secuencias que tengan sentido y diviertan al mismo tiempo. ¡A poner en práctica su lógica, Genios!”</td>
+                    </tr>
+                     <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 9 (0,5 minutos):</strong> Proyectar Diapositiva 15 “Revisión de Objetivos” para reforzar lo aprendido sobre bloques de movimiento y sonido como herramientas lógicas para animar historias y simular un juego de mesa.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Han sido unos genios, exploradores de la lógica! Hoy descubrieron que los bloques de movimiento y sonido son como las piezas de un juego, con una lógica que nos ayuda a dar vida a las historias. Con lo aprendido, ¡están listos para usar el paper programming y planificar sus propios juegos en Scratch Jr.! ¡Felicidades!”</td>
                     </tr>
                 </table>
             </div>
         </div>
-         <!-- Actividad 4 -->
-        <div id="activity-4" class="activity" data-time="10">
-             <div class="banner" onclick="toggleContent('activity_4_content')">
-                <div class="title">🤝 Actividad 4: Team Gnius ⏰ Tiempo: 10 minutos</div>
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity" data-time="10" >
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">🧠 Actividad 4: Brain Vitamin ⏰ Tiempo: 10 minutos</div>
                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                 <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                   Formar equipos y promover el trabajo colaborativo para compartir ideas y mejorar las animaciones.
+                    Construcción de torres con ladrillos LEGO para activar la lógica y la planificación.
                 </div>
             </div>
             <div id="activity_4_content" class="content">
@@ -215,44 +230,28 @@
                         <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
                         <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                     </tr>
-                    <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Formar equipos y promover el trabajo colaborativo para compartir ideas y mejorar las animaciones.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Creadores de Animaciones, es momento de formar equipos para trabajar juntos como verdaderos directores de cine! 🎬 Júntense con dos o tres compañeros que estén cerca para formar su equipo de animación en el parque. Juntos compartirán ideas, mejorarán sus proyectos y harán magia en la pantalla."</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #ddd;">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Organizar equipos y roles para facilitar el trabajo colaborativo, asegurando que cada integrante tenga una tarea específica.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Cada equipo necesita un plan de trabajo! 🌟 Decidan juntos quién será: - Director de Animación: Lidera y organiza el proyecto. - Diseñador de Escenas: Revisa los detalles del fondo y los personajes. - Experto en Movimiento: Se enfoca en los movimientos y las acciones de los personajes. ¡Organícense en un minuto, Genios!"</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #ddd;">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1 minuto):</strong> Distribuir las herramientas necesarias para la actividad, incluyendo Magic Tablets y otros materiales de registro.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Es hora de recoger las herramientas de animador! 🌟 Cada equipo necesitará sus Magic Tablets u otros materiales para registrar sus ideas y trabajar juntos. ¡Tienen 30 segundos para prepararse, directores, diseñadores y expertos en movimiento!"</td>
-                    </tr>
                      <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (2 minutos):</strong> Revisar los proyectos de los compañeros y dar retroalimentación constructiva, enfocándose en los detalles y la creatividad.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Directores, diseñadores y expertos en movimiento, a observar con atención! 🔎 Revisen las animaciones de sus compañeros y respondan estas preguntas: - ¿Qué les gustó más de la historia? - ¿Qué podrían mejorar para hacerla aún más emocionante? - ¿Qué detalles de movimiento y acción les inspiraron? ¡Sean curiosos y constructivos en sus comentarios!"</td>
+                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (1 minuto):</strong> Proyectar Diapositiva 14 “Tricky Tower: Lógica en Equilibrio” y explicar la actividad paso a paso, comparando la construcción con la creación de estructuras lógicas en programación.</td>
+                       <td style="padding: 10px; vertical-align: top;">“¡Es hora de movernos y pensar como verdaderos ingenieros de la creatividad! Vamos a construir torres con nuestros ladrillos LEGO, pero hay un reto: no pueden encajarlos, ¡solo balancearlos! Cada ladrillo debe mantenerse en su lugar, como si estuvieran colocando bloques lógicos en una historia. ¿Listos para poner a prueba su equilibrio y lógica?”</td>
                     </tr>
-                     <tr style="border-bottom: 1px solid #ddd;">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 5 (3 minutos):</strong> Alternar roles para que cada estudiante sea maestro y aprendiz, compartiendo sus proyectos y recibiendo retroalimentación.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Ahora es su turno de brillar como animadores! 🌟 Por turnos, expliquen cómo diseñaron sus proyectos: - ¿Qué personajes y movimientos crearon? - ¿Qué desafíos encontraron en su proceso? - ¿Qué hace que su animación sea única? El resto del equipo hará preguntas para aprender más. ¡Luego cambien de rol y muestren su talento!"</td>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (3 minutos):</strong> Proyectar Diapositiva 15 “Niveles del Reto: Equilibrio con Lógica” y explicar las opciones adicionales como si fueran nuevos niveles de dificultad en un juego.</td>
+                       <td style="padding: 10px; vertical-align: top;">“Vamos a hacer este desafío aún más emocionante. ¡Miren los siguientes niveles! Intenten construir con una sola mano, o cambiando de mano después de cada ladrillo. Si son verdaderos expertos, usen solo dos dedos, ¡o intenten balancear la torre en la palma de la mano! ¡Cada nivel es un nuevo reto para su equilibrio y su lógica!”</td>
                     </tr>
-                     <tr style="border-bottom: 1px solid #ddd;" id="activity-4-step-6">
-                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 6 (3 minutos):</strong> Colaborar para ajustar y mejorar los proyectos tras compartir aprendizajes, implementando las ideas sugeridas.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Es tiempo de perfeccionar sus animaciones, Genios! 🚀 Tomen las ideas que compartieron y ajusten sus creaciones. Recuerden, los detalles hacen la diferencia. ¡Trabajen juntos para que sus historias sean aún más geniales y emocionantes!"</td>
-                   </tr>
-                    <tr style="border-bottom: 1px solid #ddd;" id="activity-4-step-7">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 7 (2 minutos):</strong> Reflexionar sobre la experiencia de trabajo en equipo y compartir aprendizajes clave de la creación de animaciones en el parque.</td>
-                        <td style="padding: 10px; vertical-align: top;">"¡Directores, diseñadores y expertos en movimiento, reflexionemos sobre esta experiencia en el parque! 🌿 - ¿Qué aprendieron trabajando juntos en equipo? - ¿Cómo mejoraron sus proyectos gracias a las ideas de sus compañeros? - ¿Qué fue lo más divertido de crear animaciones juntos? ¡El trabajo en equipo siempre nos lleva a lo más alto en la creatividad!"</td>
+                    <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (2 minutos):</strong> Sin diapositiva. Conversar con los estudiantes sobre lo aprendido: ¿Qué fue lo más difícil? ¿Qué estrategias utilizaron para mantener el equilibrio? ¿Cómo la paciencia y la lógica les ayudaron a construir sus torres?</td>
+                         <td style="padding: 10px; vertical-align: top;">“¡Gran trabajo, Genios! ¿Qué trucos aprendieron para que sus torres se mantuvieran en pie? ¿Qué fue lo más difícil y qué hicieron para superarlo? ¿Cómo la paciencia y la lógica les ayudaron a crear estructuras sólidas? Reflexionemos juntos, porque cada reto nos acerca a la perfección."</td>
                     </tr>
                 </table>
             </div>
         </div>
           <!-- Actividad 5 -->
-        <div id="activity-5" class="activity" data-time="2.5">
+        <div id="activity-5" class="activity" data-time="3">
             <div class="banner" onclick="toggleContent('activity_5_content')">
-                <div class="title">🏅 Actividad 5: Honor the Lab ⏰ Tiempo: 2.5 minutos</div>
+                <div class="title">🤝 Actividad 5: Team Gnius ⏰ Tiempo: 3 minutos</div>
                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
                 <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
-                     Reflexión y organización para finalizar la misión.
+                   Formación de equipos para diseñar historias en el parque.
                 </div>
             </div>
             <div id="activity_5_content" class="content">
@@ -261,17 +260,127 @@
                         <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
                         <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Maestro</th>
                     </tr>
-                    <tr style="border-bottom: 1px solid #ddd;">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (0,5 minutos):</strong> Reflexionar sobre los objetivos iniciales y destacar los logros colectivos del grupo como creadores de animaciones en el parque.</td>
-                        <td style="padding: 10px; vertical-align: top;">“¡Creadores de Animaciones, qué día tan increíble hemos tenido en el parque! 🌿 Reflexionemos juntos: - ¿Cumplimos nuestra misión de hoy? ¡Sí! Exploramos el parque, creamos interacciones divertidas entre personajes, y compartimos animaciones increíbles. ¡Todo gracias a su creatividad y trabajo en equipo! 🎨"</td>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (1 minutos):</strong> Proyectar Diapositiva 16 “Team Gnius: Diseñando el Parque”. Dar las instrucciones para que los estudiantes formen equipos y preparen sus ideas.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Es hora de unir fuerzas, Genios! 🤝 Para este reto, vamos a formar equipos de 4 diseñadores de historias del parque. Juntos, vamos a crear las mejores animaciones. ¡Busquen sus compañeros de equipo y prepárense para planificar como verdaderos profesionales de la narración!”</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Reconocer los logros del grupo y despedir la clase con energía positiva, enfatizando su papel como creadores de animaciones.</td>
-                         <td style="padding: 10px; vertical-align: top;">“¡Felicidades, Genios Animadores! 🌟 Hoy se convirtieron en verdaderos directores de cine en el parque y crearon historias maravillosas. Cada movimiento, cada personaje, y cada reto superado es una prueba de su talento y habilidad. Recuerden siempre: ¡ustedes tienen el poder de construir mundos increíbles con su creatividad! ¡Nos vemos en nuestra próxima aventura!”</td>
-                   </tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (0,5 minutos):</strong> Proyectar Diapositiva 17 “Cronómetro de Equipo” con una cuenta regresiva de 30 segundos para organizar los equipos.</td>
+                       <td style="padding: 10px; vertical-align: top;">“¡El tiempo corre, Genios! Tienen 30 segundos para formar sus equipos de 4 personas. ¡Organicen sus ideas, encuentren a sus compañeros y prepárense para la planificación en equipo!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (0,5 minutos):</strong> Proyectar la Diapositiva 18 “Recogida de Materiales: Planifiquemos Juntos” con instrucciones para recoger las Magic Tablets y empezar la actividad.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Líderes de equipo, vengan a recoger una Magic Tablet para su grupo! Recuerden, la Magic Tablet es su cuaderno de trabajo, y cada equipo necesita una. Tienen 30 segundos para obtener sus herramientas. ¡Rápido y organizado, equipo!”</td>
+                    </tr>
+                     <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (0,5 minutos):</strong> Proyectar la Diapositiva 19 “Cronómetro de Materiales” con una cuenta regresiva de 30 segundos para que los equipos recojan sus Magic Tablets.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡El tiempo corre, Genios! Tienen 30 segundos para recoger sus Magic Tablets y regresar a sus equipos. Recuerden: ¡un equipo organizado es la clave para planificar la mejor historia del parque!”</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+               <!-- Actividad 6 -->
+        <div id="activity-6" class="activity" data-time="16">
+            <div class="banner" onclick="toggleContent('activity_6_content')">
+                <div class="title">🚀 Actividad 6: Challenge ⏰ Tiempo: 16 minutos</div>
+                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+                <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+                    Planificación de animaciones con el método de paper programming.
+                </div>
+            </div>
+            <div id="activity_6_content" class="content">
+                 <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                        <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                        <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Sugerido</th>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (1 minuto):</strong> Proyectar la Diapositiva 20 “Paper Programming: La Lógica de la Historia” y recordar cómo este método ayuda a organizar ideas antes de programar.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Genios, recordemos el paper programming! Con este método, vamos a dibujar nuestras historias en papel, como si estuviéramos creando el guion para una obra de teatro en el parque. ¡Así, tendremos cada paso claro antes de usar Scratch Jr.!”</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (1 minuto):</strong> Proyectar la Diapositiva 21 “Niveles de la Historia en el Parque” y detallar las instrucciones, <span style="color: red; font-weight: bold;">condiciones</span> y objetivos para cada nivel (Rookie, Master, Hacker).</td>
+                        <td style="padding: 10px; vertical-align: top;">"""Estos son los niveles para sus historias en el parque: <br><br> <strong>Nivel Rookie (Fácil): ‘Exploración en el Parque’</strong>  <br><br> Diseñen una animación donde el personaje explore y descubra tres elementos en el parque (árboles, un banco, un estanque).  <br><br> <span style="color: red; font-weight: bold;">Condición:</span> Usen movimientos y un sonido al detenerse. <br><br> <strong>Objetivo:</strong> Practicar acciones en diferentes puntos del escenario.  <br><br> <strong>Nivel Master (Intermedio): ‘Amigos en el Parque’</strong> <br><br> Diseñen una animación donde el personaje principal interactúe con dos amigos en diferentes lugares del parque. <br><br> <span style="color: red; font-weight: bold;">Condición:</span> Usen movimientos y sonidos para cada interacción.  <br><br> <strong>Objetivo:</strong> Usen la lógica para crear interacciones entre personajes. <br><br> <strong>Nivel Hacker (Difícil): ‘La Fiesta en el Parque’</strong> <br><br> Diseñen una animación donde los tres personajes se reúnan y hagan una fiesta en el parque con movimientos y sonidos coordinados. <br><br> <span style="color: red; font-weight: bold;">Condición:</span> Los personajes deben moverse de forma coordinada y sincronizada.  <br><br> <strong>Objetivo:</strong> Crear una secuencia lógica con movimientos y sonidos. ¡Elijan su nivel y a planificar!"""</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1,5 minutos):</strong> Proyectar la Diapositiva 22 “Planifiquemos la Escena” con un ejemplo visual de cómo organizar los pasos en una lista, como un guion de una obra.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Miren la pantalla y piensen como directores de escena. ¿Qué harán sus personajes en el parque? Escriban en la Magic Tablet cada paso de la historia, como si fueran instrucciones para los actores: ‘Personaje camina al estanque’, ‘Suena un ‘Pop’’, ‘Personaje salta’. ¡Así, organizan sus ideas para crear una historia emocionante!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 4 (10 minutos):</strong> Proyectar la Diapositiva 23 “Escribe tu Guion del Parque” con un cronómetro visual de 10 minutos.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Es su turno de ser guionistas, Genios! Tienen 10 minutos para crear su diseño en equipo. Si eligieron Rookie, una animación sencilla. Si eligieron Master, personajes que interactúan. Y si son Hacker, una fiesta en el parque. ¡Manos a la obra!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 5 (2 minutos):</strong> Proyectar la Diapositiva 24 “Repasemos la Lógica con el Patito” para recordar cómo usar este método para revisar la lógica de cada paso.</td>
+                         <td style="padding: 10px; vertical-align: top;">“¡Vamos a usar el método del Patito de Goma! Por turnos, explíquenle su secuencia a un patito imaginario, como si fuera un amigo. Los demás escuchen con atención para que todo tenga lógica y la historia del parque tenga sentido. ¡Es hora de poner a prueba sus planes!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                       <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 6 (1 minuto):</strong> Proyectar Diapositiva 25 “Intercambio de Roles” para que todos experimenten la revisión desde diferentes puntos de vista.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Ahora cambien de roles, como si intercambiaran los sombreros del equipo de producción! Los que explicaron ahora escuchen, y los que escucharon ahora expliquen su secuencia a sus compañeros. ¡Así todos podrán practicar y entender mejor cómo mejorar su guion!”</td>
+                    </tr>
+                     <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 7 (2 minutos):</strong> Proyectar Diapositiva 26 “Revisión y Ajustes del Guion” para que los equipos discutan cómo mejorar su plan para la animación en el parque.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Tómense un momento para hablar en equipo, como si fueran directores ajustando sus guiones. ¿Qué partes de la historia son claras y qué partes podrían mejorar? ¿Cómo harían para que los movimientos y sonidos encajen aún mejor? ¡Trabajen juntos y afinen sus planes para que sus historias sean perfectas!”</td>
+                    </tr>
                     <tr>
-                         <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1 minutos):</strong> Promover la responsabilidad al devolver los materiales utilizados y organizar el espacio de trabajo, dejando el laboratorio listo para futuras creaciones.</td>
-                        <td style="padding: 10px; vertical-align: top;">“Antes de despedirnos de nuestro estudio de animación, debemos dejar todo listo para nuestra próxima creación! 🌿 Por favor, devuelvan las Magic Tablets y todos los materiales a su lugar. Recuerden que un espacio limpio nos inspira para seguir creando y aprendiendo. ¡Gracias por su colaboración!”</td>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 8 (0,5 minutos):</strong> Proyectar Diapositiva 27 “¡Mon-e a la Producción Creativa!” para celebrar el logro del equipo.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Excelente trabajo, Genios! ¡Han creado un guion increíble para su animación del parque! ¡Se han ganado su Mon-e por todo su esfuerzo, creatividad y lógica! ¡Son unos grandes autores de Scratch Jr.!”</td>
+                   </tr>
+                   <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 9 (0,5 minutos):</strong> Proyectar Diapositiva 28 “Objetivos de la Historia” para recordar los aprendizajes clave y conectar la planeación con la programación en Scratch Jr.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Hoy aprendieron a planificar sus animaciones en el parque usando paper programming, y a revisar sus ideas con el método del Patito de Goma. ¡Esto los prepara para crear historias aún más increíbles en Scratch Jr. ¡Ustedes son increíbles!”</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+         <!-- Actividad 7 -->
+        <div id="activity-7" class="activity" data-time="4">
+            <div class="banner" onclick="toggleContent('activity_7_content')">
+                <div class="title">🥚 Actividad 7: Easter Egg ⏰ Tiempo: 4 minutos</div>
+                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+                <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+                    Reto sorpresa para recordar un dato curioso.
+                </div>
+            </div>
+            <div id="activity_7_content" class="content">
+                 <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                        <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                        <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Sugerido</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #ddd;">
+                       <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (1 minuto):</strong> Proyectar Diapositiva 29 “¡Es Hora del Easter Egg!”. Presentar el momento del Easter Egg como un reto sorpresa para recordar un dato curioso.</td>
+                        <td style="padding: 10px; vertical-align: top;">“¡Genios, llegó el momento del Easter Egg! 🥚 Vamos a ver cuánto recuerdan de la explicación. ¿Recuerdan que hablábamos de un juego de mesa que se parecía a la forma en la que programamos en Scratch Jr.? ¡Preparen sus mentes porque viene una pregunta sorpresa!”</td>
+                    </tr>
+                     <tr style="border-bottom: 1px solid #ddd;">
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 2 (2 minutos):</strong> Proyectar Diapositiva 30 “Pregunta del Easter Egg”. Mostrar la pregunta y guiar la participación de los estudiantes.</td>
+                         <td style="padding: 10px; vertical-align: top;">“Aquí está su pregunta sorpresa: ¿Recuerdan el juego que tiene un tablero que es como un mapa de programación y donde cada casilla te hace avanzar, retroceder o saltar? ¿Cuál es el nombre de ese juego? ¡Levanten la mano si saben la respuesta!”</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 3 (1 minuto):</strong> Proyectar Diapositiva 31 “¡Respuesta Correcta!” para mostrar el juego de la oca, conectándolo con el uso de bloques de programación.</td>
+                         <td style="padding: 10px; vertical-align: top;">“¡Correcto! El juego que tiene un tablero como un mapa de programación es… ¡el juego de la Oca! En este juego y en Scratch Jr., las acciones son como piezas de un rompecabezas, donde cada paso nos lleva a una aventura diferente. ¡Han demostrado una gran memoria y atención! ¡Un aplauso para los Genios del juego y la programación!”</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity" data-time="2">
+            <div class="banner" onclick="toggleContent('activity_8_content')">
+                <div class="title">🏅 Actividad 8: Honor the Lab ⏰ Tiempo: 2 minutos</div>
+                 <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+                <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+                    Organización del espacio para cerrar la misión con éxito.
+                </div>
+            </div>
+             <div id="activity_8_content" class="content">
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                    <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                        <th style="width: 50%; padding: 10px; text-align: left; border-right: 1px solid #ddd;">Acción</th>
+                        <th style="width: 50%; padding: 10px; text-align: left;">Diálogo Sugerido</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border-right: 1px solid #ddd; vertical-align: top;"><strong>Paso 1 (2 minutos):</strong> Proyectar la Diapositiva 32 “Limpieza y Orden en el Parque” para guiar a los estudiantes en la organización del espacio antes de finalizar.</td>
+                        <td style="padding: 10px; vertical-align: top;">“Antes de despedirnos de nuestro parque digital, vamos a dejar todo listo para la próxima aventura. - Guarden sus Magic Tablets con cuidado. - Recojan los ladrillos de LEGO y acomódenlos en su lugar. - Asegúrense de que todo quede limpio y ordenado para la próxima misión. ¡Recuerden, un espacio limpio nos ayuda a crear mejor!”</td>
                     </tr>
                 </table>
             </div>
